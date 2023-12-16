@@ -1,0 +1,36 @@
+{% include 'base.html' %}
+{% include 'navigation.html' %}
+<style>
+  body {
+        background-color:rgb(32, 143, 199);
+  }
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Form</title>
+</head>
+<body>
+    <center>
+    <h3><hr color="white">Eye Care Hospital<hr color="white"></h3>
+    <form method="post" action="">
+        {% csrf_token %}
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" required><br>
+
+        <label for="message">Message:</label>
+        <textarea name="message" rows="4" required></textarea><br>
+
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</center>
+</body>
+</html>

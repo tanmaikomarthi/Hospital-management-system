@@ -1,0 +1,49 @@
+{% extends "registration/registration_base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Register for an account" %}{% endblock %}
+
+{% block content %}
+{% include 'navigation.html' %}
+<style>
+    body
+    {
+        background-image: url('https://www.appletechsoft.com/wp-content/uploads/2020/06/Hospital-Management-System.jpg');
+        background-size: cover;
+        
+    }
+    .card {
+      width: 1000px;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 20px;
+      background-color:rgba(36, 36, 115, 0.774);
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.502);
+      color: white;
+    }
+</style>
+<b>
+   <br> <div class="container">
+        <div class="card">
+<i><form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+   <b> <center><input type="submit" class="btn btn-outline-success my-2 my-sm-0" value="{% trans 'Submit' %}" /></b></center>
+</form></i></div></div><br><br><br>
+
+{% endblock %}
+
+
+{% comment %}
+registration/registration_form.html
+Used to show the form users will fill out to register. By default, has
+the following context:
+
+form
+    The registration form. This will be an instance of some subclass
+    of django.forms.Form; consult `Django's forms documentation
+    <http://docs.djangoproject.com/en/dev/topics/forms/>`_ for
+    information on how to display this in a template.
+{% endcomment %}

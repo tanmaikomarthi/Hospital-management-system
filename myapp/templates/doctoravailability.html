@@ -1,0 +1,44 @@
+{% include 'base.html' %}
+{% include 'navigation.html' %}
+<style>
+    body {
+          background-color:rgb(32, 143, 199);
+    }
+  </style>
+  
+
+{% block content %}
+<font color="white">
+<center><h2><hr color="white">Doctor Availability<hr color="white"></h2></center></font>
+<center>
+
+      
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Doctor Name</th>
+        <th scope="col">Qualification</th>
+        <th scope="col">Specialization</th>
+        <th scope="col">Start_time</th>
+        <th scope="col">End_time</th>
+      </tr>
+    </thead>
+    {% for i in Doctors %}
+    <tbody>
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{ i.Name }} </td>
+        <td>{{ i.Qualification }}</td>
+        <td>{{ i.Specialization }}</td>
+        <td>{{i.start_time}}</td>
+        <td>{{ i.end_time }}</td>
+      </tr>   
+     {% endfor %}
+
+</table>
+</center>
+{% endblock content %}
+<center><a class="btn btn-outline-light" href="{% url 'home' %}">Go Back</a></center>
+

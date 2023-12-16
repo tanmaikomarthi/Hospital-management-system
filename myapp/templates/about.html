@@ -1,0 +1,33 @@
+{% include 'base.html' %}
+{% include 'navigation.html' %}
+<style>
+    body {
+          background-color:rgb(32, 143, 199);
+    }
+  </style>
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <font color="white">
+            <h1 class="strong">Who we are and<br>what we do</h1>
+            <p class="lead">This is the World's leading portal for<br>easy and quick</p>
+            <p>Pediatric PKP Graft Failure More Likely at Younger Ages colleagues have observed that one of his eyes does not move in sync with the other, and that this is a new problem; they are concerned about the potential health implications.</p>
+        </div>
+        <div class="col-lg-6">
+            <h1 class="strong">About Us</h1>
+            <p>Ophthalmologists are doctors who care for patients with eye conditions. They diagnose, treat and prevent disorders of the eyes and visual system, using medical and surgical skills.
+            An ophthalmologist is a medical doctor (M.D.) specializing in eye care. After the completion of four years of undergraduate study, an ophthalmologist must complete four years of medical school and spend a minimum of four years of residency (hospital-based training). An optometrist has a degree of doctor of optometry.</p>
+            <p>In 2020, 25% of US adults with chronic pain managed their symptoms with medication alone versus nonpharmalogic treatments such as physical, occupational, or cognitive behavioral therapies.</p>
+
+        </font>
+        </div>
+    </div>
+</div>
+<br><br><center><a class="btn btn-outline-light" href="{% url 'home' %}">Go Back</a></center>
+
+
+{% endblock content %}
+

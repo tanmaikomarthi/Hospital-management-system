@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark yellow bg- dark yellow">
+  <a class="navbar-brand" href="#"><h2><img src="https://i.pinimg.com/originals/a9/b2/8a/a9b28a364a28833a35914d74d9d009e9.jpg" height="50",width="50"> EYE CARE HOSPITAL</h2></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}"><h7>Home</h7><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}"><h7>Contact</h7></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}"><h7>About</h7></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'doctoravailability' %}"><h7>DoctorAvailability</h7></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login_user' %}"><h7>DoctorLogin</h7></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'registration_register' %}"><h7>Patient Register</h7></a>
+      </li>
+      <font color="white">
+      {{user}}&nbsp;&nbsp;&nbsp;&nbsp;
+        {% if not user.is_authenticated %} 
+        {% else %}
+        <a class="btn btn-outline-light" href="{% url 'logout_user' %}">Logout</a>&nbsp;&nbsp;
+        {% endif %}
+        <a  class="btn btn-outline-secondary my-2 my-sm-0"  href="/admin/">Admin</a>&nbsp;&nbsp;
+      </font>
+    </ul>
+    
+  </div>
+</nav>

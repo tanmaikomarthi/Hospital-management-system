@@ -1,0 +1,36 @@
+{% include 'base.html' %}
+{% include 'navigation.html' %}
+<style>
+  body {
+        background-color:rgb(32, 143, 199);
+  }
+</style>
+
+
+{% block content %}
+
+
+<font color="white">
+ 
+
+    <br> <center><h1>CONTACT US</h1></center>
+    <center>
+      <h5><br><i class="fas fa-phone-square">:-<br></i>0866-2475966</h5>
+      <h5><br><i class="fa fa-envelope">:-<br></i>eyecare@gmail.com</h5>
+      <h5><br><i class="fa fa-address-card">:-<br></i><a href="http://maps.google.com/maps?q=vijayawada" class="text-dark">vijayawada</a></h5>
+    </center>
+    
+
+  <br>
+  <br>
+  <br>
+  <br>
+  
+<center><a class="btn btn-outline-light" href="{% url 'home' %}">Go Back</a></center>
+
+</font> 
+
+
+    
+
+{% endblock content %}

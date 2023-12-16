@@ -1,0 +1,22 @@
+{% include 'base.html' %}
+{% include 'navigation.html' %}
+<style>
+  body {
+        background-color:rgb(32, 143, 199);
+  }
+</style>
+{% block content %}
+    <center><h1>login page</h1><br>
+     <!-- login.html -->
+<form method="post" action="{% url 'login_user' %}">
+  {% csrf_token %}
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required><br>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required><br>
+  <br>
+</center>
+<center><input type="submit" value="Login"></center>
+</form>
+{% endblock content %}
